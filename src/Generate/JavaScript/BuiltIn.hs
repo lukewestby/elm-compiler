@@ -1,5 +1,5 @@
 module Generate.JavaScript.BuiltIn
-  ( character, string
+  ( character, string, tuple0
   , list, range
   , recordUpdate
   , eq, cmp
@@ -40,6 +40,10 @@ string :: String -> JS.Expression ()
 string str =
   JS.StringLit () str
 
+
+tuple0 :: JS.Expression ()
+tuple0 =
+  Var.coreNative "Utils" "_Tuple0"
 
 
 -- LISTS
